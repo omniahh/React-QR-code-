@@ -8,11 +8,11 @@ const App=  (props)=>  {
     <>
       <QrReader
         onResult={(result, error) => {
-          if (!!result) {
+          if (result) {
             setData(result?.text);
           }
 
-          if (!!error) {
+          if (error) {
             console.info(error);
           }
         }}
